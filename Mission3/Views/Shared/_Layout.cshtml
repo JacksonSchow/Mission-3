@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--webpage title-->
+    <title>@ViewData["Title"]</title>
+    <!--link bootstrap-->
+    <link href="~/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <!--linking my style sheet-->
+    <link href="~/css/MyStyles.css" rel="stylesheet" type="text/css" />
+
+    <!--add an icon-->
+    <link rel="icon" href="~/img/website_icon.png" type="image/x-icon" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-5">
+                <!--navbar to navigate from page to page-->
+                <nav>
+                    <a asp-controller="SubView" asp-action="Index">Home</a>
+                    <a asp-controller="SubView" asp-action="GradeCalculator">Grade Calculator</a>
+                </nav>
+            </div>
+            <div class="col-5 center-container">
+                
+            </div>
+            <div class="col-1"></div>
+        </div>
+        @RenderBody()
+    </div>
+
+    <!--bringing in the bootstrap JavaScript, the jQuery min file, and my JavaScript-->
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/lib/jquery/jquery-3.6.0.min.js"></script>
+    <script src="~/js/MyScripts.js"></script>
+</body>
+</html>
